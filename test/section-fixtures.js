@@ -16,4 +16,5 @@ module.exports =
   , { _id: '5', visible: true, parent: null }
   , { _id: '6', visible: true, parent: null }
   , { _id: '7', visible: true, parent: null }
+  , { _id: '8', visible: false, parent: null }
   ]

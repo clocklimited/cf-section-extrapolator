@@ -6,12 +6,21 @@ var requiredFields = [ '_id', 'parent' ]
  * Extrapolate some actual section ids from a description of desired sections,
  * given a section service and the current section id.
  */
-function extrapolate(sectionService, currentSectionId, desiredSections, cb) {
+function extrapolate(sectionService, currentSectionId, desiredSections, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
 
   var sectionIds = []
+    , findFn = sectionService.findPublic
+
+  if (opts.ensurePublic === false) {
+    findFn = sectionService.find
+  }
 
   // Get all of the publicly available sections
-  sectionService.findPublic({}, { fields: requiredFields }, function (err, sections) {
+  findFn({}, { fields: requiredFields }, function (err, sections) {
 
     if (err) return cb(err)
 

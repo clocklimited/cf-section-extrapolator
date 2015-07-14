@@ -12,7 +12,7 @@ Take a list describing a set of sections and callback with a list of actual sect
 
 ### var extrapolate = require('cf-section-extrapolator')
 
-### extrapolate(sectionService, currentSectionId, desiredSections, cb)
+### extrapolate(sectionService, currentSectionId, desiredSections, options={}, cb)
 
 - `sectionService` is a service that has a `findPublic(query, cb)` method
 - `currentSectionId` is the stringy id of the current section
@@ -68,6 +68,15 @@ sectionize(sectionService, currentSectionId, desiredSections, function (err, ids
   // ids == [ '789' ]
 })
 ```
+
+## Options
+
+##### ensurePublic
+
+Type: `boolean`
+Default: `true`
+
+Determines whether the section lookup is performed as a `findPublic` or a `find`.
 
 ## Credits
 Built by developers at [Clock](http://clock.co.uk).

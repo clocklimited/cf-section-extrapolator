@@ -51,4 +51,16 @@ describe('Section Extrapolator', function () {
     })
   })
 
+  it('should extrapolate ids of non public and public sections when ensurePublic is set to false', function (done) {
+    var opts = { ensurePublic: false }
+      , sections = [
+        { id: '8', includeSubSections: false }
+      , { id: '1', includeSubSections: false }
+      ]
+    extrapolate(sectionService, '1', sections, opts, function (err, ids) {
+      if (err) return done(err)
+      assert.deepEqual(ids, [ '8', '1' ])
+      done()
+    })
+  })
 })
