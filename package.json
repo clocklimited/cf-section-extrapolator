@@ -2,7 +2,7 @@
   "author": "Ben Gourley",
   "name": "cf-section-extrapolator",
   "description": "Take a list describing a set of sections and callback with a list of section ids",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "tags": [],
   "repository": {
     "type": "git",
