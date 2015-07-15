@@ -2,6 +2,11 @@ var sectionFixtures = require('./section-fixtures')
 
 module.exports =
 { findPublic: function (a, b, cb) {
+    return cb(null, sectionFixtures.filter(function (fixture) {
+      return fixture.visible
+    }))
+  }
+, find: function (a, b, cb) {
     return cb(null, sectionFixtures)
   }
 , getChildSections: function getChildSections(parent, sections, maxDepth, depth) {
