@@ -24,9 +24,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "1",
+    "mocha": "^6.1.4",
     "istanbul": "0",
     "jshint": "2",
-    "jshint-full-path": "0"
+    "jshint-full-path": "^1.1.1"
   }
 }
