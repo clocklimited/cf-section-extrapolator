@@ -1,5 +1,7 @@
 # cf-section-extrapolator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/cf-section-extrapolator.svg)](https://greenkeeper.io/)
+
 **This module supercedes [cf-sectionizer](https://github.com/clocklimited/cf-sectionizer).**
 
 Take a list describing a set of sections and callback with a list of actual section ids.
